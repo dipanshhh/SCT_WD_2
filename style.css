@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(0, 217, 255, 0.12),
+            transparent 35%
+        ),
+        #080b14;
+
+    color: white;
+}
+
+
+/* Main Container */
+
+.stopwatch-container {
+    width: 90%;
+    max-width: 600px;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid #1e293b;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* Brand */
+
+.brand {
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.brand span {
+    color: #00d9ff;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    color: #00d9ff;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Heading */
+
+h1 {
+    font-size: 42px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Time Display */
+
+.display {
+    padding: 25px 10px;
+
+    margin-bottom: 30px;
+
+    border-radius: 18px;
+
+    background: #05070d;
+
+    border: 1px solid #1e293b;
+
+    color: #00d9ff;
+
+    font-size: clamp(38px, 8vw, 62px);
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    font-family: monospace;
+
+    box-shadow:
+        inset 0 0 25px rgba(0, 217, 255, 0.05);
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+
+    padding: 13px 22px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Start */
+
+#startBtn {
+    background: #00d9ff;
+
+    color: #061018;
+}
+
+#startBtn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 217, 255, 0.25);
+}
+
+
+/* Pause */
+
+#pauseBtn {
+    background: #1e293b;
+
+    color: white;
+}
+
+#pauseBtn:hover {
+    background: #334155;
+
+    transform: translateY(-3px);
+}
+
+
+/* Reset */
+
+#resetBtn {
+    background: #1e293b;
+
+    color: white;
+}
+
+#resetBtn:hover {
+    background: #334155;
+
+    transform: translateY(-3px);
+}
+
+
+/* Lap Button */
+
+.lap-btn {
+    width: 100%;
+
+    margin-top: 15px;
+
+    background: transparent;
+
+    color: #00d9ff;
+
+    border: 1px solid #334155;
+}
+
+.lap-btn:hover {
+    border-color: #00d9ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* Lap Section */
+
+.laps-container {
+    margin-top: 35px;
+
+    text-align: left;
+}
+
+.laps-container h2 {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+
+/* Lap Items */
+
+.lap-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 15px;
+
+    margin-bottom: 8px;
+
+    background: #111827;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+}
+
+.lap-number {
+    color: #00d9ff;
+
+    font-weight: bold;
+}
+
+.empty {
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .stopwatch-container {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .display {
+        font-size: 34px;
+
+        letter-spacing: 1px;
+    }
+
+    .buttons button {
+        padding: 11px 16px;
+
+        font-size: 13px;
+    }
+}
